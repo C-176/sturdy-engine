@@ -1,0 +1,12 @@
+随机森林需要调的参数：
+1>树的颗数 n_estimators 默认是100棵
+
+2>树的最大深度 max_depth
+
+3>分隔的最小样本数，节点的样本数小于此数将不在进行分隔 min_samples_split
+
+4>分隔后叶子结点上最少的样本数 min_samples_leaf
+
+可以是int 那就是叶子结点最少的样本数 也可是float 那么就是ceil(min_samples_leaf * n_samples样本数)作为每个结点的最小样本数
+
+5>max_features 随机森林建树时随机选用的特征个数，可选：1.auto 2.log 3.sqrt http://4.int 5.folat 6.None
