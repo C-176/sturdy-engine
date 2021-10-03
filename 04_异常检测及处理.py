@@ -376,18 +376,18 @@ print(f'共剔除了{num1-num2}个，此步剔除了{len(lista)}个')
 check_df = check_df.drop('id',axis=1)
 # check_df.index = [i for i in range(len(check_df))]
 # print(check_df)
-csv_last_fact0 = check_df.loc[(check_df['进厂1#加氯点投加量']==0.0) & (check_df['进厂2#加氯点投加量']==0.0)]
-csv_last_lake0 = check_df.loc[(check_df['水源地1#加氯点投加量']==0.0)&(check_df['水源地2#加氯点投加量']==0.0)]
-csv_last = check_df.loc[(check_df['进厂1#加氯点投加量']!=0.0)&(check_df['进厂2#加氯点投加量']!=0.0)&(check_df['水源地1#加氯点投加量']!=0.0)&(check_df['水源地2#加氯点投加量']!=0.0)]
-csv_last_fact0.index = range(len(csv_last_fact0))
-csv_last_lake0.index = range(len(csv_last_lake0))
-csv_last.index = range(len(csv_last))
-print(csv_last_lake0)
-print(csv_last_fact0)
-print(csv_last)
+# csv_last_fact0 = check_df.loc[(check_df['进厂1#加氯点投加量']==0.0) & (check_df['进厂2#加氯点投加量']==0.0)]
+# csv_last_lake0 = check_df.loc[(check_df['水源地1#加氯点投加量']==0.0)&(check_df['水源地2#加氯点投加量']==0.0)]
+# csv_last = check_df.loc[(check_df['进厂1#加氯点投加量']!=0.0)&(check_df['进厂2#加氯点投加量']!=0.0)&(check_df['水源地1#加氯点投加量']!=0.0)&(check_df['水源地2#加氯点投加量']!=0.0)]
+# csv_last_fact0.index = range(len(csv_last_fact0))
+# csv_last_lake0.index = range(len(csv_last_lake0))
+# csv_last.index = range(len(csv_last))
+# print(csv_last_lake0)
+# print(csv_last_fact0)
+# print(csv_last)
 check_df.index = range(1, len(check_df) + 1)
 print(check_df)
-csv_last_lake0.to_csv(r'C:\Users\1\Desktop\Python源码\06_深度学习\RF\csv\csv_last_lake0.csv',index_label='id')
-csv_last_fact0.to_csv(r'C:\Users\1\Desktop\Python源码\06_深度学习\RF\csv\csv_last_fact0.csv',index_label='id')
-csv_last.to_csv(r'C:\Users\1\Desktop\Python源码\06_深度学习\RF\csv\csv_last.csv',index_label='id')
-# check_df.to_csv(r'C:\Users\1\Desktop\Python源码\06_深度学习\RF\csv\csv_last.csv',index_label='id')
+# csv_last_lake0.to_csv(r'C:\Users\1\Desktop\Python源码\06_深度学习\RF\csv\csv_last_lake0.csv',index_label='id')
+# csv_last_fact0.to_csv(r'C:\Users\1\Desktop\Python源码\06_深度学习\RF\csv\csv_last_fact0.csv',index_label='id')
+# csv_last.to_csv(r'C:\Users\1\Desktop\Python源码\06_深度学习\RF\csv\csv_last.csv',index_label='id')
+check_df.to_csv(r'C:\Users\1\Desktop\Python源码\06_深度学习\RF\csv\csv_last.csv',index_label='id')
