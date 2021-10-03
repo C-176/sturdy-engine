@@ -138,19 +138,9 @@ colums = ['id', '水源地原水浊度', '水源地耗氧量', '水源地PH值',
           '进厂2#加氯点投加量', '水源地1#加氯点投加量', '水源地2#加氯点投加量', '进厂臭氧预投加量']
 
 # 加载数据，并指定表头
-data_pd_lake0 = pd.DataFrame(
-    np.array(pd.read_csv(r'C:\Users\1\Desktop\Python源码\06_深度学习\RF\csv\csv_last_lake0.csv', index_col=None)),
-    columns=colums)
-columns_drop_lake0 = ['id', '1200进厂水量', '1400进厂水量', '2号沉淀池出水浊度', '水源地1#加氯点投加量', '水源地2#加氯点投加量' ]
-train(data_pd_lake0, columns_drop_lake0,'lake0')
-data_pd_fact0 = pd.DataFrame(
-    np.array(pd.read_csv(r'C:\Users\1\Desktop\Python源码\06_深度学习\RF\csv\csv_last_fact0.csv', index_col=None)),
-    columns=colums)
-columns_drop_fact0 = ['id', '1200进厂水量', '1400进厂水量', '2号沉淀池出水浊度', '进厂1#加氯点投加量', '进厂2#加氯点投加量']
-train(data_pd_fact0, columns_drop_fact0,'fact0')
-data_pd_no0 = pd.DataFrame(
+data_pd = pd.DataFrame(
     np.array(pd.read_csv(r'C:\Users\1\Desktop\Python源码\06_深度学习\RF\csv\csv_last.csv', index_col=None)), columns=colums)
-columns_drop_no0 = ['id', '1200进厂水量', '1400进厂水量', '2号沉淀池出水浊度', ]
-train(data_pd_no0, columns_drop_no0,'no0')
+columns_drop = ['id', '1200进厂水量', '1400进厂水量', '2号沉淀池出水浊度', ]
+train(data_pd, columns_drop,'no0')
 end_time = time.time()  # 结束时刻
 print('用时:', datetime.timedelta(seconds=(end_time - start_time) // 1))  # 打印用时
